@@ -1,38 +1,163 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --offblue: #00F0FF;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding: 0.75rem 2rem;
+  z-index: 1; /*moves back if negative*/
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.mainNav {
+  max-width: 90vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.abcCompany {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: blue;
+}
+.abcCompany:hover {
+  cursor: pointer;
+  color: black;
+}
+
+.nav-Links {
+  margin-top: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  grid-gap: 2vw;
+  list-style: none;
+}
+
+.navItem:hover {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.loginButton {
+  padding: 3px 7px 3px 7px;
+  background-color: var(--offblue);
+  margin-bottom: 5px;
+  font-size: 1rem;
+}
+
+hr {
+  margin-top: 5px;
+  background-color: blue;
+  height: 3px;
+}
+
+
+
+
+
+.mainTable {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+}
+
+
+.form-container {
+  border: 2px solid black;
+  padding : 10px;
+  width: 90vw;
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.record-Employee {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.form-control {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin-right: 5vw;
+  width: 20vw;
+}
+.addEmpButton {
+  width: 100px;
   color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 5px;
+  background-color: blue;
+}
+.addEmpButton:hover {
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+.employeeTable {
+  text-align: center;
+  border-collapse: collapse;
+  border: 2px solid black;
+  border-top: 0px;
+  width: 90vw;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.employeeTable td {
+  text-align: left;
+  font-size: 1rem;
+  padding: 0.5rem;
+  padding-left: 1vw;
+  border-right: 2px solid black;
 }
+
+.employeeTable th {
+  padding: 0.5vw;
+  border: 2px solid black;
+  border-top: 0px;
+}
+
+.editButton {
+  font-size: 1rem;
+  padding: 0.3rem;
+  border-radius: 5px;
+  width: 5vw;
+}
+
+.editButton:hover {
+  cursor: pointer;
+}
+
+#generatePdf {
+  font-size: 1rem;
+  padding: 0.3rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 87vw;
+  background-color: var(--offblue);
+}
+
+#generatePdf:hover {
+  cursor: pointer;
+}
+
+
